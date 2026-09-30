@@ -12,25 +12,33 @@
 </head>
 <body>
   <div class="noise"></div>
-  <header class="nav">
-    <a class="brand" href="#top">RJ<span>_</span></a>
-    <nav>
-      <a href="#about">about</a><a href="#stack">stack</a><a href="#projects">projects</a>
-      <a href="#certifications">Certifications</a><a href="#timeline">timeline</a><a href="#contact">contact</a>
-    </nav>
-    <button class="terminal-toggle" id="terminalToggle">> terminal</button>
+  
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="#top">RALPH.JEAN<span>_</span></a>
+      <nav class="nav-links">
+        <a href="#about">about</a>
+        <a href="#stack">stack</a>
+        <a href="#projects">projects</a>
+        <a href="#certifications">certifications</a>
+        <a href="#timeline">timeline</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <button class="terminal-toggle" id="terminalToggle">> terminal</button>
+    </div>
   </header>
 
   <main id="top">
+    <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero-grid"></div>
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span> SYSTEM // RALPH.JEAN</p>
+      <div class="hero-content">
+        <p class="terminal-label"><span class="dot"></span> SYSTEM // RALPH.JEAN</p>
         <h1>BUILD.<br><span>BREAK.</span><br>LEARN.</h1>
         <div class="console-line"><span>ralph@portfolio:~$</span> <span id="typing"></span><span class="cursor">▋</span></div>
-        <p class="lead">Computer Science student graduating and preparing to turn ideas into useful, well-engineered software.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">VIEW PROJECTS <span>↘</span></a>
+        <p class="hero-description">Computer Science student graduating and preparing to turn ideas into useful, well-engineered software.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="#projects">VIEW PROJECTS <span>↘</span></a>
           <a class="btn" href="resume.pdf" download>DOWNLOAD RESUME <span>↓</span></a>
         </div>
       </div>
@@ -47,61 +55,104 @@
       </div>
     </section>
 
-    <section id="about" class="section split">
-      <div class="section-label">01 // ABOUT</div>
-      <div>
-        <p class="kicker">A student who learns by building.</p>
-        <h2>I turn concepts into <em>working things.</em></h2>
-        <p class="body-copy">I'm a Computer Science student preparing to graduate and begin my career in software development. I enjoy taking an idea from a rough concept and transforming it into software that solves problems, supports users, and teaches me something new along the way.</p>
-        <p class="body-copy">My work spans software development, web technologies, databases, interactive applications, and game development. I enjoy building projects that are practical, creative, and grounded in solid engineering fundamentals.</p>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about">
+      <div class="about-grid">
+        <div>
+          <div class="section-label">01 // ABOUT</div>
+          <p class="kicker">A student who learns by building.</p>
+          <h2>I turn concepts into <em>working things.</em></h2>
+          <div class="about-text">
+            <p>I'm a Computer Science student preparing to graduate and begin my career in software development. I enjoy taking an idea from a rough concept and transforming it into a functional, polished product.</p>
+            <p>My work spans software development, web technologies, databases, interactive applications, and game development. I enjoy building projects that are practical, creative, and leave an impact.</p>
+          </div>
+        </div>
+        <div class="about-meta">
+          <div class="meta-card">
+            <span class="meta-label">EDUCATION</span>
+            <span class="meta-value">BS Computer Science</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">STATUS</span>
+            <span class="meta-value">GRADUATING 2026</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">FOCUS</span>
+            <span class="meta-value">SOFTWARE DEV</span>
+          </div>
+          <div class="meta-card">
+            <span class="meta-label">LOCATION</span>
+            <span class="meta-value">PHILIPPINES</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="stack" class="section">
+    <!-- TECH STACK SECTION -->
+    <section id="stack" class="section stack">
       <div class="section-label">02 // TECH STACK</div>
-      <div class="stack-grid">
-        <div class="stack-card"><span class="num">01</span><h3>LANGUAGES</h3><p>JavaScript · Python · Java · C#</p></div>
-        <div class="stack-card"><span class="num">02</span><h3>WEB</h3><p>HTML · CSS · React · Node.js</p></div>
-        <div class="stack-card"><span class="num">03</span><h3>DATABASE</h3><p>MySQL · PostgreSQL · Firebase</p></div>
-        <div class="stack-card"><span class="num">04</span><h3>TOOLS</h3><p>Git · GitHub · VS Code · Figma</p></div>
-        <div class="stack-card wide"><span class="num">05</span><h3>CONCEPTS</h3><p>OOP · Data Structures · Algorithms · Database Design · REST APIs · Version Control · Software Engineering</p></div>
+      <h2 style="margin-bottom: 45px;">Tools & Technologies</h2>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">{ }</div>
+          <h3>LANGUAGES</h3>
+          <p>JavaScript · Python · Java · C#</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">◇</div>
+          <h3>WEB</h3>
+          <p>HTML · CSS · React · Node.js</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">◑</div>
+          <h3>DATABASE</h3>
+          <p>MySQL · PostgreSQL · Firebase</p>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">⚙</div>
+          <h3>TOOLS</h3>
+          <p>Git · GitHub · VS Code · Figma</p>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects">
       <div class="section-label">03 // FEATURED PROJECTS</div>
-      <div class="section-heading"><h2>Things I've <em>built.</em></h2><span>Selected work and learning projects.</span></div>
+      <h2 style="margin-bottom: 45px;">Things I've <em>built.</em></h2>
       <div class="projects-grid">
-        <article class="project featured">
-          <div class="project-art kitchen"><span>PROJECT_001</span><strong>KITCHEN<br>CHAOS</strong><small>ROGUELIKE / SURVIVAL / GAME</small></div>
-          <div class="project-info"><p class="tag">GAME DEVELOPMENT</p><h3>Kitchen Chaos</h3><p>A fast-paced top-down roguelike survival game where players manage customer orders under pressure while surviving escalating chaos.</p>
-            <div class="project-links">
-              <a class="btn btn-small" href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">Source Code ↗</a>
-              <a class="btn btn-small" href="#contact">Contact ↗</a>
-            </div>
+        <article class="project-card">
+          <div class="project-number">PROJECT_001</div>
+          <h3>Kitchen Chaos</h3>
+          <p class="project-tag">GAME DEVELOPMENT</p>
+          <p>A fast-paced top-down roguelike survival game where players manage customer orders under pressure while fending off chaos.</p>
+          <div class="project-links">
+            <a class="btn btn-small" href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">Source Code ↗</a>
+            <a class="btn btn-small" href="#contact">Contact ↗</a>
           </div>
         </article>
-        <article class="project">
-          <div class="project-art grid-art"><span>PROJECT_002</span><strong>CMASS<br>SYSTEM</strong></div>
-          <div class="project-info"><p class="tag">SOFTWARE DEVELOPMENT</p><h3>CMASS System</h3><p>A scheduling and communication platform for organizing church operations, preventing double bookings, and improving coordination between staff and volunteers.</p>
-            <div class="project-links">
-              <a class="btn btn-small" href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">Source Code ↗</a>
-              <a class="btn btn-small" href="#about">Overview ↗</a>
-            </div>
+        <article class="project-card">
+          <div class="project-number">PROJECT_002</div>
+          <h3>CMASS System</h3>
+          <p class="project-tag">SOFTWARE DEVELOPMENT</p>
+          <p>A scheduling and communication platform for organizing church operations, preventing double bookings, and streamlining workflows.</p>
+          <div class="project-links">
+            <a class="btn btn-small" href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">Source Code ↗</a>
+            <a class="btn btn-small" href="#about">Overview ↗</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="certifications" class="section">
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section certifications">
       <div class="section-header">
-        <span class="section-number">04</span>
+        <div class="section-number">04</div>
         <div>
           <p class="section-label">VERIFIED ACHIEVEMENTS</p>
           <h2>Certifications & Badges</h2>
         </div>
       </div>
-
       <div class="certifications-grid">
         <article class="cert-card">
           <div class="cert-preview">
@@ -210,48 +261,120 @@
       </div>
     </section>
 
-    <section id="timeline" class="section">
-      <div class="section-label">04 // ENGINEERING TIMELINE</div>
-      <div class="timeline-intro"><h2>My Story <em>is this.</em></h2><p>I keep learning by building, iterating, and shipping small but meaningful projects.</p></div>
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="section timeline-section">
+      <div class="section-label">05 // ENGINEERING TIMELINE</div>
+      <h2 style="margin-bottom: 45px;">My Story <em>is this.</em></h2>
       <div class="timeline">
-        <div class="timeline-item"><span>2022</span><div><h3>Beginnings</h3><p>Started exploring programming and problem solving with a focus on software fundamentals.</p></div></div>
-        <div class="timeline-item"><span>2024</span><div><h3>Project Building</h3><p>Developed web apps, game prototypes, and systems projects while strengthening my engineering skills.</p></div></div>
-        <div class="timeline-item"><span>2025</span><div><h3>Learning in Depth</h3><p>Deepened my knowledge in databases, software design, and application architecture.</p></div></div>
-        <div class="timeline-item graduation"><span>2026</span><div><h3>🎓 GRADUATING</h3><p>Preparing to graduate and step into a software development role.</p></div></div>
+        <div class="timeline-item">
+          <span>2022</span>
+          <div>
+            <h3>Beginnings</h3>
+            <p>Started exploring programming and problem solving with a focus on software fundamentals.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span>2024</span>
+          <div>
+            <h3>Project Building</h3>
+            <p>Developed web apps, game prototypes, and systems projects while strengthening my engineering skills.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span>2025</span>
+          <div>
+            <h3>Learning in Depth</h3>
+            <p>Deepened my knowledge in databases, software design, and application architecture.</p>
+          </div>
+        </div>
+        <div class="timeline-item graduation">
+          <span>2026</span>
+          <div>
+            <h3>🎓 GRADUATING</h3>
+            <p>Preparing to graduate and step into a software development role.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section github-panel">
-      <div class="section-label">05 // GITHUB</div>
+    <!-- GITHUB SECTION -->
+    <section class="section github-section">
+      <div class="section-label">06 // GITHUB</div>
       <div class="github-box">
-        <div><p class="kicker">OPEN SOURCE / ACTIVITY</p><h2>Show the work.<br><em>Not just the words.</em></h2></div>
-        <div class="github-stats"><div><b>12+</b><span>PROJECTS</span></div><div><b>5+</b><span>TECH STACKS</span></div><div><b>∞</b><span>LEARNING</span></div></div>
-        <a class="btn primary" href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">OPEN GITHUB ↗</a>
+        <div>
+          <p class="kicker">OPEN SOURCE / ACTIVITY</p>
+          <h2>Show the work.<br><em>Not just the words.</em></h2>
+        </div>
+        <div class="github-stats">
+          <div><b>12+</b><span>PROJECTS</span></div>
+          <div><b>5+</b><span>TECH STACKS</span></div>
+          <div><b>∞</b><span>LEARNING</span></div>
+        </div>
+        <a class="btn btn-primary" href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">OPEN GITHUB ↗</a>
       </div>
     </section>
 
+    <!-- EDUCATION SECTION -->
     <section class="section education">
-      <div class="section-label">06 // EDUCATION</div>
-      <div class="edu-card"><span>🎓</span><div><p class="kicker">BACHELOR OF SCIENCE</p><h2>COMPUTER SCIENCE</h2><p>UNIVERSITY OF SAN AGUSTIN · 2022 — 2027</p><div class="edu-tags"><span>SOFTWARE ENGINEERING</span><span>WEB DEVELOPMENT</span><span>DATABASES</span></div></div></div>
-    </section>
-
-    <section class="section building">
-      <div class="section-label">07 // CURRENTLY BUILDING</div>
-      <div class="building-grid">
-        <div><span>01</span><h3>Portfolio v2</h3><p>Improving my developer identity and project presentation.</p></div>
-        <div><span>02</span><h3>Game Project</h3><p>Developing an original interactive game experience.</p></div>
-        <div><span>03</span><h3>Learning</h3><p>Deepening my full-stack and software engineering skills.</p></div>
+      <div class="section-label">07 // EDUCATION</div>
+      <div class="edu-card">
+        <span>🎓</span>
+        <div>
+          <p class="kicker">BACHELOR OF SCIENCE</p>
+          <h2>COMPUTER SCIENCE</h2>
+          <p>UNIVERSITY OF SAN AGUSTIN · 2022 — 2027</p>
+          <div class="edu-tags">
+            <span>Software Engineering</span>
+            <span>Web Development</span>
+            <span>Game Development</span>
+            <span>Database Systems</span>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- CURRENTLY BUILDING SECTION -->
+    <section class="section building">
+      <div class="section-label">08 // CURRENTLY BUILDING</div>
+      <div class="building-grid">
+        <div>
+          <span>01</span>
+          <h3>Portfolio v2</h3>
+          <p>Improving my developer identity and project presentation.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <h3>Game Project</h3>
+          <p>Developing an original interactive game experience.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <h3>Learning</h3>
+          <p>Deepening my full-stack and software engineering skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section contact">
-      <div class="section-label">08 // CONTACT</div>
-      <div class="contact-wrap"><div><p class="kicker">LET'S BUILD SOMETHING.</p><h2>Ready for the<br><em>next commit?</em></h2></div><div class="contact-links"><a href="mailto:rcamarig@usa.edu.ph">rcamarig@usa.edu.ph</a><a href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></div></div>
+      <div class="section-label">09 // CONTACT</div>
+      <div class="contact-wrap">
+        <div>
+          <p class="kicker">LET'S BUILD SOMETHING.</p>
+          <h2>Ready for the<br><em>next commit?</em></h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:rcamarig@usa.edu.ph">rcamarig@usa.edu.ph</a>
+          <a href="https://github.com/rcamarig-boop" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/ralph-jean/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer><span>RALPH.JEAN © 2026</span><span>BUILDING THINGS IS HOW I LEARN.</span><span>SYS_OK <i></i></span></footer>
 
+  <!-- TERMINAL -->
   <div class="terminal" id="terminal">
     <div class="terminal-head"><span>ralph@portfolio:~</span><button id="terminalClose">×</button></div>
     <div class="terminal-body" id="terminalBody">
