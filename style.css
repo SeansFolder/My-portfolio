@@ -235,33 +235,38 @@ main {
 }
 
 .console-line {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 22px;
-    color: var(--text-soft);
-    font-family: var(--font-mono);
-    font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  min-height: 1.4em;
 }
 
 .console-line span:first-child {
-    color: var(--green);
+  color: var(--green);
+  white-space: nowrap;
 }
 
-#typing {
-    min-width: 170px;
-    color: var(--text);
+.typing-text {
+  display: inline-block;
+  min-width: 170px;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-word;
+  position: relative;
 }
 
-.cursor {
-    display: inline-block;
-    color: var(--green);
-    animation: blink 1s steps(1) infinite;
+.typing-text::after {
+  content: "▋";
+  color: var(--green);
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: baseline;
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+  50% { opacity: 0; }
 }
 
 .hero-description {
