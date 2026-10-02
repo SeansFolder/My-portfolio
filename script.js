@@ -43,7 +43,7 @@ input.addEventListener("keydown", e => {
   const cmd = input.value.trim().toLowerCase();
   const line = document.createElement("p");
   line.className = "terminal-output";
-  line.textContent = `ralph@portfolio:~$ ${cmd}`;
+  line.textContent = `seans@portfolio:~$ ${cmd}`;
   body.insertBefore(line, input.parentElement);
 
   if (cmd === "clear") {
