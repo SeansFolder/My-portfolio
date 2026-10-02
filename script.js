@@ -28,12 +28,12 @@ document.getElementById("terminalToggle").onclick = () => {
 document.getElementById("terminalClose").onclick = () => terminal.classList.remove("open");
 
 const commands = {
-  help: `Available commands:\n  about      → about me\n  projects   → featured projects\n  skills     → tech stack\n  github     → open GitHub\n  resume     → download resume\n  contact    → get contact info\n  clear      → clear terminal`,
+  help: `Available commands:\n  about      → about me\n  projects   → featured projects\n  skills     → tech stack\n  github     → open GitHub\n  resume     → download resume\n  contact [...`,
   about: `Computer Science student graduating in 2026.\nBuilding software, games, web applications, and learning through projects.`,
   projects: `Kitchen Chaos\nCMASS System\nPortfolio Projects`,
   skills: `JavaScript · Python · Java · C#\nReact · Node.js · MySQL · PostgreSQL · Git · GitHub`,
-  contact: `rcamarig@usa.edu.ph\nhttps://github.com/rcamarig-boop\nhttps://www.linkedin.com/`,
-  github: `https://github.com/rcamarig-boop`,
+  contact: `rcamarig@usa.edu.ph\nhttps://github.com/SeansFolder\nhttps://www.linkedin.com/`,
+  github: `https://github.com/SeansFolder/My-portfolio`,
   resume: `resume.pdf`
 };
 
@@ -49,7 +49,7 @@ input.addEventListener("keydown", e => {
   if (cmd === "clear") {
     document.querySelectorAll(".terminal-output").forEach(x => x.remove());
   } else if (cmd === "github") {
-    window.open("https://github.com/rcamarig-boop", "_blank", "noopener,noreferrer");
+    window.open("https://github.com/SeansFolder/My-portfolio", "_blank", "noopener,noreferrer");
   } else if (cmd === "resume") {
     window.location.href = "resume.pdf";
   } else if (commands[cmd]) {
