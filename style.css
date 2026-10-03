@@ -1,8 +1,8 @@
 /* =========================================================
-   SYSTEM // SEAN
-   SEAN — DEVELOPER PORTFOLIO
-   COMPLETE STYLESHEET
-   ========================================================= */
+    SYSTEM // SEAN
+    SEAN — DEVELOPER PORTFOLIO
+    COMPLETE STYLESHEET
+    ========================================================= */
 
 :root {
     --bg: #070a08;
@@ -39,6 +39,8 @@ html {
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
     background:
         radial-gradient(circle at top right, rgba(124, 255, 150, 0.08), transparent 30%),
         radial-gradient(circle at bottom left, rgba(124, 255, 150, 0.03), transparent 28%),
@@ -47,6 +49,7 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
+    isolation: isolate;
 }
 
 body::selection {
@@ -76,7 +79,46 @@ button {
 
 main {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.matrix-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.35;
+    background: linear-gradient(rgba(7, 10, 8, 0.18), rgba(7, 10, 8, 0.22));
+}
+
+.matrix-bg::before {
+    content: "0101101010010110\A1010101101010101\A0010110101010010\A1101001010101100\A0101010110010101\A1010100101101010\A0110101001101011\A0011000101010101\A0101011010010101\A1010001101010110\A0101100110101011\A1010101010010101\A0010101010110101\A1101010010101011\A0101010110100101\A1010010110101010\A0101101010010110\A1010101101010101\A0010110101010010\A1101001010101100\A0101010110010101\A1010100101101010\A0110101001101011";
+    position: absolute;
+    inset: -20% -10% -10%;
+    display: block;
+    font-family: var(--font-mono);
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
+    letter-spacing: 0.34em;
+    color: rgba(124, 255, 150, 0.18);
+    white-space: pre-wrap;
+    text-shadow: 0 0 18px rgba(124, 255, 150, 0.15);
+    transform: perspective(900px) rotateX(75deg) scale(1.5);
+    animation: matrixDrift 18s linear infinite;
+    user-select: none;
+}
+
+@keyframes matrixDrift {
+    0% {
+        transform: perspective(900px) rotateX(75deg) translateY(-8%) scale(1.5);
+    }
+    50% {
+        transform: perspective(900px) rotateX(75deg) translateY(2%) scale(1.5);
+    }
+    100% {
+        transform: perspective(900px) rotateX(75deg) translateY(-8%) scale(1.5);
+    }
 }
 
 .noise {
@@ -86,7 +128,7 @@ main {
     background-size: 11px 11px;
     opacity: 0.18;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 ::selection {
@@ -1033,11 +1075,11 @@ footer {
     .tech-grid,
     .projects-grid,
     .certifications-grid,
-    .github-box,
-    .contact-wrap,
+    .about-grid,
     .building-grid,
-    .about-grid {
-        grid-template-columns: 1fr 1fr;
+    .contact-wrap,
+    .github-box {
+        grid-template-columns: 1fr;
     }
 
     .github-box {
@@ -1064,23 +1106,8 @@ footer {
         gap: 12px 18px;
     }
 
-    .hero,
-    .section,
-    footer {
+    .hero, .section, footer {
         width: min(calc(100% - 24px), var(--max-width));
-    }
-
-    .hero {
-        min-height: auto;
-    }
-
-    .tech-grid,
-    .projects-grid,
-    .certifications-grid,
-    .about-grid,
-    .building-grid,
-    .contact-wrap {
-        grid-template-columns: 1fr;
     }
 
     .status-row {
