@@ -49,7 +49,6 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
-    isolation: isolate;
 }
 
 body::selection {
@@ -88,38 +87,59 @@ main {
     z-index: 0;
     pointer-events: none;
     overflow: hidden;
-    opacity: 0.35;
-    background: linear-gradient(rgba(7, 10, 8, 0.18), rgba(7, 10, 8, 0.22));
+    background: linear-gradient(180deg, rgba(7, 10, 8, 0.3), rgba(7, 10, 8, 0.25) 50%, rgba(7, 10, 8, 0.35));
 }
 
-.matrix-bg::before {
-    content: "0101101010010110\A1010101101010101\A0010110101010010\A1101001010101100\A0101010110010101\A1010100101101010\A0110101001101011\A0011000101010101\A0101011010010101\A1010001101010110\A0101100110101011\A1010101010010101\A0010101010110101\A1101010010101011\A0101010110100101\A1010010110101010\A0101101010010110\A1010101101010101\A0010110101010010\A1101001010101100\A0101010110010101\A1010100101101010\A0110101001101011";
+.matrix-char {
     position: absolute;
-    inset: -20% -10% -10%;
-    display: block;
     font-family: var(--font-mono);
-    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
-    line-height: 1.5;
-    letter-spacing: 0.34em;
-    color: rgba(124, 255, 150, 0.18);
-    white-space: pre-wrap;
-    text-shadow: 0 0 18px rgba(124, 255, 150, 0.15);
-    transform: perspective(900px) rotateX(75deg) scale(1.5);
-    animation: matrixDrift 18s linear infinite;
+    font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+    color: rgba(124, 255, 150, 0.35);
+    text-shadow: 0 0 8px rgba(124, 255, 150, 0.25);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    animation: matrixFall linear infinite;
+    will-change: transform;
     user-select: none;
+    white-space: nowrap;
 }
 
-@keyframes matrixDrift {
+@keyframes matrixFall {
     0% {
-        transform: perspective(900px) rotateX(75deg) translateY(-8%) scale(1.5);
+        transform: translateY(-100vh) rotateZ(0deg);
+        opacity: 0.6;
     }
-    50% {
-        transform: perspective(900px) rotateX(75deg) translateY(2%) scale(1.5);
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
     }
     100% {
-        transform: perspective(900px) rotateX(75deg) translateY(-8%) scale(1.5);
+        transform: translateY(100vh) rotateZ(360deg);
+        opacity: 0;
     }
 }
+
+.matrix-char:nth-child(1) { left: 5%; animation-duration: 12s; animation-delay: 0s; }
+.matrix-char:nth-child(2) { left: 10%; animation-duration: 15s; animation-delay: 1s; }
+.matrix-char:nth-child(3) { left: 15%; animation-duration: 14s; animation-delay: 2s; }
+.matrix-char:nth-child(4) { left: 20%; animation-duration: 16s; animation-delay: 0.5s; }
+.matrix-char:nth-child(5) { left: 25%; animation-duration: 13s; animation-delay: 3s; }
+.matrix-char:nth-child(6) { left: 30%; animation-duration: 17s; animation-delay: 1.5s; }
+.matrix-char:nth-child(7) { left: 35%; animation-duration: 12s; animation-delay: 2.5s; }
+.matrix-char:nth-child(8) { left: 40%; animation-duration: 15s; animation-delay: 0s; }
+.matrix-char:nth-child(9) { left: 45%; animation-duration: 14s; animation-delay: 2s; }
+.matrix-char:nth-child(10) { left: 50%; animation-duration: 16s; animation-delay: 1s; }
+.matrix-char:nth-child(11) { left: 55%; animation-duration: 13s; animation-delay: 3s; }
+.matrix-char:nth-child(12) { left: 60%; animation-duration: 15s; animation-delay: 1.5s; }
+.matrix-char:nth-child(13) { left: 65%; animation-duration: 17s; animation-delay: 2.5s; }
+.matrix-char:nth-child(14) { left: 70%; animation-duration: 12s; animation-delay: 0.5s; }
+.matrix-char:nth-child(15) { left: 75%; animation-duration: 14s; animation-delay: 2s; }
+.matrix-char:nth-child(16) { left: 80%; animation-duration: 16s; animation-delay: 0s; }
+.matrix-char:nth-child(17) { left: 85%; animation-duration: 13s; animation-delay: 1.5s; }
+.matrix-char:nth-child(18) { left: 90%; animation-duration: 15s; animation-delay: 3s; }
+.matrix-char:nth-child(19) { left: 95%; animation-duration: 14s; animation-delay: 2.5s; }
 
 .noise {
     position: fixed;
